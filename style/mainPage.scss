@@ -1,0 +1,49 @@
+.mainPage{
+    height: 100vh;
+    max-width: 100vw;
+    background-image: url('../mainPhoto.jpg');
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    .header{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: white;
+        @media(min-width: 1024px) and (orientation: landscape){
+            left: 25%;
+        }
+        @media (min-width: 640px) and (orientation: landscape){
+            left: 30%;
+        }
+        &__name{
+            font-size: 1.6rem;
+            line-height: 0rem;
+            font-weight: lighter;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            @media(min-width: 375px){
+                font-size: 1.8rem;
+            }
+            @media (min-width: 768px) and (orientation: landscape){
+                font-size: 2rem;
+            }
+            @media(min-width: 768px){
+                font-size: 3rem;
+            }
+        }
+        &__description{
+            font-size: .6rem;
+            font-weight: lighter;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+            @media (min-width: 768px) and (orientation: landscape){
+                font-size: 1rem;
+            }
+            @media(min-width: 768px){
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
