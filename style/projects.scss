@@ -1,5 +1,5 @@
 .projects{
-    min-height: 100vh;
+    min-height: 95vh;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -10,6 +10,7 @@
         margin: 0;
         font-weight: lighter;
         width: 100%;
+        margin: 40px 0;
     }
     .project{
         display: grid;
@@ -102,10 +103,14 @@
             width: 120px;
             height: 30px;
             border: 2px solid white;
-            background-color: red;
             border-radius: 20px;
             font-weight: bold;
             margin-top: 20px;
+            transition: .3s ease;
+            &:hover{
+                background-color: white;
+                color: black;
+            }
             @media(min-width: 550px){
                 grid-row: 3/4;
                 grid-column: 2/3;
@@ -125,6 +130,24 @@
             i{
                 padding: 0 10px;
             }
+        }
+    }
+    &__information{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        font-size: .8rem;
+        padding: 0 20px;
+        line-height: 1.5rem;
+        @media(min-width: 560px){
+            font-size: 1rem;
+            margin: 30px 0;
+        }
+        a{
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
         }
     }
 }

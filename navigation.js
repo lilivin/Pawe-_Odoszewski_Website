@@ -1,20 +1,35 @@
 const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.navigation');
+const nav = document.querySelector('.mobileNavigation');
 const body = document.querySelector('.aboutclass');
-const aboutMeSection = document.querySelector('.sectionAboutMe');
-const contactSection = document.querySelector('.sectionContact');
-const myProjectsSection = document.querySelector('.sectionMyProjects');
-const mainSiteSection =  document.querySelector('.sectionMainSite');
+const sectionMain = document.getElementById('mainPageNavigation');
+const sectionAboutMe = document.getElementById('aboutMeNavigation');
+const sectionConcerts =  document.getElementById('concertsNavigation');
+const sectionProjects =  document.getElementById('recordsNavigation');
+const sectionContact =  document.getElementById('contactNavigation');
 
 const handleClick = () => {
     hamburger.classList.toggle('hamburger--active');
-    nav.classList.toggle('navigation--active');
+    nav.classList.toggle('mobileNavigation--active');
     body.classList.toggle('disable');
 }
 
 hamburger.addEventListener('click', handleClick);
 
-$('nav div ul li').on('click', function(){
+$('nav p').on('click', function(){
+    const goToSection= "#" + $(this).attr('class');
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top - 60
+    })
+})
+
+$('nav ul li').on('click', function(){
+    const goToSection= "#" + $(this).attr('class');
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top - 60
+    })
+})
+
+$('div ul li').on('click', function(){
     const goToSection= "#" + $(this).attr('class');
     $('body, html').animate({
         scrollTop: $(goToSection).offset().top
@@ -23,10 +38,12 @@ $('nav div ul li').on('click', function(){
 
 function closeNavigation(){
     hamburger.classList.toggle('hamburger--active');
-    nav.classList.toggle('navigation--active');
+    nav.classList.toggle('mobileNavigation--active');
+    console.log('chuj');
 }
 
-mainSiteSection.addEventListener('click', closeNavigation);
-aboutMeSection.addEventListener('click', closeNavigation);
-contactSection.addEventListener('click', closeNavigation);
-myProjectsSection.addEventListener('click', closeNavigation);
+sectionMain.addEventListener('click', closeNavigation);
+sectionAboutMe.addEventListener('click', closeNavigation);
+sectionConcerts.addEventListener('click', closeNavigation);
+sectionProjects.addEventListener('click', closeNavigation);
+sectionContact.addEventListener('click', closeNavigation);

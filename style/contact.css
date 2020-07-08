@@ -1,0 +1,113 @@
+.contactSection {
+  background-image: url("../contactPhoto.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+}
+
+@media (min-width: 769px) {
+  .contactSection {
+    min-height: 95vh;
+  }
+}
+
+.contactSection .contact {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contactSection .contact__header {
+  font-size: 3rem;
+  padding: 10px 20px;
+  font-weight: lighter;
+}
+
+.contactSection .contact__ways {
+  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .contactSection .contact__ways {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.contactSection .contact__ways .way {
+  font-size: 2rem;
+  color: white;
+  line-height: 0;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.contactSection .contact__ways .way i {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 550px) {
+  .contactSection .contact__ways .way i {
+    font-size: 3rem;
+  }
+}
+
+.contactSection .contact__ways .way p {
+  font-size: .8rem;
+}
+
+@media (min-width: 550px) {
+  .contactSection .contact__ways .way p {
+    font-size: 1rem;
+  }
+}
+
+.contactSection .contact__footer {
+  display: block;
+  margin: 50px auto;
+}
+
+.contactSection .contact__footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (min-width: 769px) {
+  .contactSection .contact__footer {
+    display: none;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
