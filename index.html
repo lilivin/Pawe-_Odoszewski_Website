@@ -12,11 +12,15 @@
     <link rel="stylesheet" href="./style/concerts.css">
     <link rel="stylesheet" href="./style/projects.css">
     <link rel="stylesheet" href="./style/contact.css">
+    <link rel="stylesheet" href="./style/loader.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0233149bfc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <nav class="navigation">
         <p class="sectionMain">Paweł Odoszewski</p>
         <ul class="navigation__list">
@@ -233,13 +237,6 @@
 
 
     <script type="text/javascript">
-        window.addEventListener('scroll', function () {
-            var nav = document.querySelector('nav');
-            nav.classList.toggle('sticky', window.scrollY > 0);
-        })
-
-
-
         CountDownTimer('07/23/2020 6:00 PM', 'countdown');
 
         function CountDownTimer(dt, id) {
@@ -277,6 +274,11 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./navigation.js"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </body>
 
 </html>

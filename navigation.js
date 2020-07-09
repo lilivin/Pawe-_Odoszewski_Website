@@ -47,3 +47,8 @@ sectionAboutMe.addEventListener('click', closeNavigation);
 sectionConcerts.addEventListener('click', closeNavigation);
 sectionProjects.addEventListener('click', closeNavigation);
 sectionContact.addEventListener('click', closeNavigation);
+
+window.addEventListener('scroll', function () {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('sticky', window.scrollY > 0);
+})
