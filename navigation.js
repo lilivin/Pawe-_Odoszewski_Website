@@ -39,7 +39,6 @@ $('div ul li').on('click', function(){
 function closeNavigation(){
     hamburger.classList.toggle('hamburger--active');
     nav.classList.toggle('mobileNavigation--active');
-    console.log('chuj');
 }
 
 sectionMain.addEventListener('click', closeNavigation);
